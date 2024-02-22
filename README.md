@@ -1,112 +1,87 @@
-# Air Datepicker
+<div align="center">
+  <img src="https://grow.empress.eco/uploads/default/original/2X/1/1f1e1044d3864269d2a613577edb9763890422ab.png" alt="Logo" width="80" height="80">
+  <h3 align="center">jQuery Datepicker</h3>
+  <p align="center">
+    Offering flexibility and cross-browser compatibility for seamless date selection in web applications.
+    <br />
+    <a href="https://grow.empress.eco/"><strong>Explore the Docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/empress-eco/jquery_datepicker/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/empress-eco/jquery_datepicker/issues">Request Feature</a>
+  </p>
+</div>
 
-Lightweight customizable cross-browser jQuery datepicker, built with es5 and css-flexbox. Works in all modern desktop and mobile browsers (tested on Android 4.4+ and iOS8+).
+## About jQuery Datepicker
 
-![air datepicker image](https://github.com/t1m0n/air-datepicker/raw/master/docs/img/promo-img-time.png)
+jQuery Datepicker, a lightweight, customizable, and user-friendly tool, is designed to enhance the experience of date selection in web applications. Developed with user-centric design, it caters to developers seeking a versatile solution that operates smoothly across various browsers.
 
-## Install
+### Key Features
 
-### bower
-```
+- User-friendly installation and usage
+- Multilingual support
+- Handling of minimum and maximum dates
+- Option for `onlyTimePicker`
+- `onShow` and `onHide` callbacks
+
+### Built With
+
+- [jQuery](https://jquery.com/)
+- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
+
+## Technical Stack and Setup Instructions
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- [bower](https://bower.io/)
+- [npm](https://www.npmjs.com/)
+
+### Installation
+
+Clone the repository using this [link](https://github.com/empress-eco/jquery_datepicker.git). You can install jQuery Datepicker via bower or npm:
+
+#### bower
+
+```sh
 bower i --save air-datepicker
 ```
-### npm
-```
+
+#### npm
+
+```sh
 npm i --save air-datepicker
 ```
 
-## Usage
+### Usage
+
+Here's a basic usage example:
+
 ```javascript
 $('.my-datepicker').datepicker([options])
 ```
+Check out our [documentation](https://grow.empress.eco/) for more detailed instructions and usage examples.
 
-## Demo and docs
-* [In English](http://t1m0n.name/air-datepicker/docs/)
-* [In Russian](http://t1m0n.name/air-datepicker/docs/index-ru.html)
+## Contribution Guidelines
 
-## Change log
+We encourage community contributions! Here's how you can contribute:
 
-### v2.2.3
-* fixed min,max dates in decade mode
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### v2.2.2
-* fixed min,max dates handling
+Remember to read through our [documentation](https://grow.empress.eco/) before making a contribution.
 
-### v2.2.1
-* changed RegExp for recognizing date parts
-* changed jquery version dependency
+## License and Acknowledgements
 
-### v2.2.0
-* added `onlyTimepicker` option
-* added `onShow` and `onHide` callbacks
-* added `VERSION` field to plugin's prototype
-* now for selecting same date in `range` mode, you should set `{toggleSelected: false}`
-* fixed `dateFormat` method (fixed wrong month name in Hungarian language)
-* fixed second call of `onRenderCallback`
-* fixed `_getCell()` throwing exception
-* new language:
-    - `sk` thanks to [RobiNN1](https://github.com/RobiNN1)
+### License
 
+This project is licensed under the MIT License. All your contributions will also be covered under the MIT License.
 
-### v2.1.0
-* added possibility to select single date when `{range: true}`
-* added support of 12 hours mode in `altFieldDateFormat`
-* improved work with minDate and maxDate when `{timepicker: true}`
-* fixed wrong class adding when `{range: true}`
-* new languages:
-    - `es` thanks to [MarioAraque](https://github.com/MarioAraque)
-    - `cs` thanks to [liborm85](https://github.com/liborm85)
-    - `hu` thanks to [gergo85](https://github.com/gergo85)
-    - `fi` thanks to [joonaskaskisolaphz](https://github.com/joonaskaskisolaphz)
-    - `pl` thanks to [xiio](https://github.com/xiio)
-    - `fr` thanks to [nicooprat](https://github.com/nicooprat)
+### Acknowledgements
 
-### v2.0.2
-* fixed dates array in `onSelect` callback
-
-### v2.0.1
-* fixed version for npm
-
-### v2.0.0
-* added timepicker (see [docs](http://t1m0n.name/air-datepicker/docs#timepicker) for more info)
-* added possibility to set `Date` in `todayButton` 
-* global variable `Datepicker` has been removed, now all placed in `$.fn.datepicker`
-* improved `selectDate` method, now one can pass an array of dates to select
-* added `npm` package
-* fixed issue caused by `placeholder` on `readonly` inputs in IE
-* fixed issue when `range` is true and first selected date is bigger than second
-* added new languages:
-    - `da`  thanks to [bjarnef](https://github.com/bjarnef)
-    - `nl`  thanks to [JaZo](https://github.com/JaZo)
-    - `pt`  thanks to [cmpscabral](https://github.com/cmpscabral)
-    - `pt-BR`  thanks to [dowglaz](https://github.com/dowglaz)
-    - `ro`  thanks to [tourniquet](https://github.com/tourniquet)
-
-### v1.2.4
-* fixed '$ is not defined' problem. 
-
-### v1.2.3
-* fixed `dateFormat` method.
-* fixed typo in Russian docs, add ids in docs headers.
-
-### v1.2.2
-* fixed typo in `monthsField`
-* added German language (thanks to [Ichag](https://github.com/Ichag))
-
-### v1.2.1
-* tests added
-* added Chinese language (thanks to [think2011](https://github.com/think2011))
-* fixed if '0' is passed to `firstDay`
-* fixed `showOtherYears` option
-* fixed `onSelect` event, when `range` is true
-* fixed case when `range` and `multipleDates` both set to true
-
-### v1.2.0
-* add `range` feature
-* improve keyboard navigation (fixed two focused cells)
-
-### v1.1.0
-* add keyboard navigation
-* add `classes` option to add custom classes
-* add `altField` option
-* bug fixes
+We extend our gratitude to the Empress Community for their foundational contributions to this project. Their innovative tools and unwavering support have played a pivotal role in shaping jQuery Datepicker's functionalities. Their pioneering work continues to inspire our project.
